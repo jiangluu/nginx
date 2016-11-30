@@ -30,6 +30,7 @@ typedef struct {
     ngx_uint_t                       next_upstream_tries;
     ngx_flag_t                       next_upstream;
     ngx_flag_t                       proxy_protocol;
+    ngx_flag_t                       lemuria;
     ngx_stream_upstream_local_t     *local;
 
 #if (NGX_STREAM_SSL)
@@ -216,6 +217,13 @@ static ngx_command_t  ngx_stream_proxy_commands[] = {
       ngx_conf_set_flag_slot,
       NGX_STREAM_SRV_CONF_OFFSET,
       offsetof(ngx_stream_proxy_srv_conf_t, proxy_protocol),
+      NULL },
+
+    { ngx_string("lemuria"),
+      NGX_STREAM_SRV_CONF|NGX_CONF_FLAG,
+      ngx_conf_set_flag_slot,
+      NGX_STREAM_SRV_CONF_OFFSET,
+      offsetof(ngx_stream_proxy_srv_conf_t, lemuria),
       NULL },
 
 #if (NGX_STREAM_SSL)
@@ -1597,14 +1605,79 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
 
                 *ll = cl;
 
-                cl->buf->pos = b->last;
-                cl->buf->last = b->last + n;
-                cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
 
-                cl->buf->temporary = (n ? 1 : 0);
-                cl->buf->last_buf = src->read->eof;
-                cl->buf->flush = 1;
+                // lemuria modify
+              #define __LEM_HH 4
+              #define __DELIM ' '
+                int le_n = n;
+                int offset = 0;
+                ngx_buf_t *le_b = b;
+                u_char *le_buf = 0;
+                if(0==from_upstream && pscf->lemuria){
+                  if(le_n<8) break;
+                  if(0 == ngx_strncmp(le_b->last,"LEM ",__LEM_HH)){
+                    offset += __LEM_HH;
+                    le_n -= __LEM_HH;
+                    u_char *bodylen = ngx_strlchr(le_b->last+offset,le_b->last+n, __DELIM);
+                    if(0==bodylen){
+                      ngx_stream_proxy_finalize(s,
+                                              NGX_STREAM_BAD_REQUEST);
+                      return;
+                    }
+                    //++bodylen;
+                    u_char *after_bodylen = ngx_strlchr(bodylen+1,le_b->last+n, '\r');
+                    if(0 == after_bodylen){
+                      ngx_stream_proxy_finalize(s,
+                                              NGX_STREAM_BAD_REQUEST);
+                      return;
+                    }
+                    u_char should_be_newline = *(after_bodylen+1);
+                    if('\n' != should_be_newline){
+                      ngx_stream_proxy_finalize(s,
+                                              NGX_STREAM_BAD_REQUEST);
+                      return;
+                    }
+                    u_char *after_bodylen2 = ngx_strlchr(bodylen+1,le_b->last+n, __DELIM);
+                    if(0!=after_bodylen2 && after_bodylen2<after_bodylen){
+                      after_bodylen = after_bodylen2;
+                    }
 
+                    le_buf = ngx_pnalloc(src->pool, after_bodylen - le_b->last +64);
+                    if (le_buf == NULL) {
+                        ngx_stream_proxy_finalize(s, NGX_STREAM_INTERNAL_SERVER_ERROR);
+                        return;
+                    }
+                    u_char *cur = ngx_cpymem(le_buf, le_b->last, after_bodylen-le_b->last);
+                    cur += ngx_sock_ntop(src->sockaddr, src->socklen, cur, 60, 0);
+
+
+                    cl->buf->pos = le_buf;
+                    cl->buf->last = cur;
+                    cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
+
+                    cl->buf->temporary = 1;
+                    cl->buf->last_buf = src->read->eof;
+                    cl->buf->flush = 1;
+
+                    n -= after_bodylen - b->last;
+                    b->last = after_bodylen;  // important
+                  }
+                  // else{
+                  //   modify nothing
+                  // }
+                }
+
+                // END
+                else{
+                  cl->buf->pos = b->last;
+                  cl->buf->last = b->last + n;
+                  cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
+
+                  cl->buf->temporary = (n ? 1 : 0);
+                  cl->buf->last_buf = src->read->eof;
+                  cl->buf->flush = 1;
+                }
+                
                 *received += n;
                 b->last += n;
                 do_write = 1;
@@ -1843,6 +1916,7 @@ ngx_stream_proxy_create_srv_conf(ngx_conf_t *cf)
     conf->next_upstream_tries = NGX_CONF_UNSET_UINT;
     conf->next_upstream = NGX_CONF_UNSET;
     conf->proxy_protocol = NGX_CONF_UNSET;
+    conf->lemuria = NGX_CONF_UNSET;
     conf->local = NGX_CONF_UNSET_PTR;
 
 #if (NGX_STREAM_SSL)
