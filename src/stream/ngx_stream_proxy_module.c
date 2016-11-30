@@ -1643,7 +1643,9 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
                     }
 
                     le_buf = ngx_pnalloc(src->pool, after_bodylen - le_b->last +64);
-                    if (le_buf == NULL) {
+
+                    ngx_chain_t *cl2 = ngx_chain_get_free_buf(c->pool, &u->free);
+                    if (NULL==le_buf || NULL==cl) {
                         ngx_stream_proxy_finalize(s, NGX_STREAM_INTERNAL_SERVER_ERROR);
                         return;
                     }
@@ -1651,16 +1653,31 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
                     cur += ngx_sock_ntop(src->sockaddr, src->socklen, cur, 60, 0);
 
 
-                    cl->buf->pos = le_buf;
-                    cl->buf->last = cur;
+                    *ll = cl2;
+
+                    cl2->buf->pos = le_buf;
+                    cl2->buf->last = cur;
+                    cl2->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
+
+                    cl2->buf->temporary = 1;
+                    cl2->buf->last_buf = 0;
+                    cl2->buf->flush = 1;
+
+                    cl2->next = cl;
+                    cl->next = NULL;
+
+                    cl->buf->pos = after_bodylen;
+                    cl->buf->last = le_b->last + n;
                     cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
 
                     cl->buf->temporary = 1;
                     cl->buf->last_buf = src->read->eof;
                     cl->buf->flush = 1;
 
-                    n -= after_bodylen - b->last;
-                    b->last = after_bodylen;  // important
+                    // n -= after_bodylen - b->last;
+                    // b->last = after_bodylen;  // important
+
+                    goto lemruria_ed;
                   }
                   // else{
                   //   modify nothing
@@ -1668,16 +1685,16 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
                 }
 
                 // END
-                else{
-                  cl->buf->pos = b->last;
-                  cl->buf->last = b->last + n;
-                  cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
+                cl->buf->pos = b->last;
+                cl->buf->last = b->last + n;
+                cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
 
-                  cl->buf->temporary = (n ? 1 : 0);
-                  cl->buf->last_buf = src->read->eof;
-                  cl->buf->flush = 1;
-                }
-                
+                cl->buf->temporary = (n ? 1 : 0);
+                cl->buf->last_buf = src->read->eof;
+                cl->buf->flush = 1;
+
+
+              lemruria_ed:
                 *received += n;
                 b->last += n;
                 do_write = 1;
