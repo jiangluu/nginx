@@ -1,0 +1,703 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_is_http_re",
+				"_is_http_response"
+			],
+			[
+				"po",
+				"pool_index_"
+			],
+			[
+				"call",
+				"callGlobalFunc"
+			],
+			[
+				"lua",
+				"lua_vm2_"
+			],
+			[
+				"sr",
+				"src_len"
+			],
+			[
+				"lu",
+				"lua_vm2_"
+			],
+			[
+				"buf",
+				"buflen"
+			],
+			[
+				"cal",
+				"callback_http_"
+			],
+			[
+				"str",
+				"strncmp"
+			],
+			[
+				"n",
+				"NewDecoder\tmahonia.Decoder ƒ"
+			],
+			[
+				"ne",
+				"NewEncoder\tmahonia.Encoder ƒ"
+			],
+			[
+				"s",
+				"HasSuffix\tbool ƒ"
+			],
+			[
+				"op",
+				"OpenFile\t*os.File, error ƒ"
+			],
+			[
+				"r",
+				"NewReader\t*iconv.Reader, error ƒ"
+			],
+			[
+				"p",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"u",
+				"UserValue\tinterface{} ƒ"
+			],
+			[
+				"us",
+				"UserValue\tinterface{} ƒ"
+			],
+			[
+				"da",
+				"datex\ttime.Time ν"
+			],
+			[
+				"a",
+				"AddDate\ttime.Time ƒ"
+			],
+			[
+				"no",
+				"Now\ttime.Time ƒ"
+			],
+			[
+				"ad",
+				"AddDate\ttime.Time ƒ"
+			],
+			[
+				"prin",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"spri",
+				"Sprint\tstring ƒ"
+			],
+			[
+				"mo",
+				"Month\tint ʈ"
+			],
+			[
+				"y",
+				"YearDay\tint ƒ"
+			],
+			[
+				"sp",
+				"Split\t[][]byte ƒ"
+			],
+			[
+				"pr",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"new",
+				"NewThreadUnsafeSet\tmapset.Set ƒ"
+			],
+			[
+				"pri",
+				"Printf\tn int, err error ƒ"
+			],
+			[
+				"_pa",
+				"_parse_a_line\t ƒ"
+			],
+			[
+				"re",
+				"ReadBytes\tline []byte, err error ƒ"
+			],
+			[
+				"sc",
+				"ScanBytes\tadvance int, token []byte, err error ƒ"
+			],
+			[
+				"log",
+				"log_dir\t ν"
+			],
+			[
+				"read",
+				"ReadDir\t[]os.FileInfo, error ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "rele/conf/nginx.conf",
+			"settings":
+			{
+				"buffer_size": 4442,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/stream/ngx_stream_proxy_module.c",
+			"settings":
+			{
+				"buffer_size": 64201,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/stream/ngx_stream.h",
+			"settings":
+			{
+				"buffer_size": 9033,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/core/ngx_proxy_protocol.c",
+			"settings":
+			{
+				"buffer_size": 3355,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 394.0,
+		"last_filter": "GoSublime: ",
+		"selected_items":
+		[
+			[
+				"GoSublime: ",
+				"GoSublime: Browse Packages"
+			]
+		],
+		"width": 404.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jl/github/nginx/src",
+		"/home/jl/github/nginx/src/stream"
+	],
+	"file_history":
+	[
+		"/home/jl/github/nginx/src/core/ngx_string.h",
+		"/home/jl/my/zzz2/printserv.go",
+		"/home/jl/github/nginx/src/core/ngx_buf.h",
+		"/home/jl/github/nginx/src/core/ngx_palloc.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_handler.c",
+		"/home/jl/github/nginx/src/event/ngx_event.c",
+		"/home/jl/github/nginx/src/stream/ngx_stream_core_module.c",
+		"/home/jl/github/nginx/src/core/ngx_proxy_protocol.c",
+		"/home/jl/github/nginx/src/stream/ngx_stream.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_realip_module.c",
+		"/home/jl/github/nginx/src/core/ngx_log.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_upstream_least_conn_module.c",
+		"/home/jl/github/nginx/src/core/ngx_proxy_protocol.h",
+		"/home/jl/github/nginx/src/core/ngx_conf_file.h",
+		"/home/jl/github/nginx/src/core/ngx_config.h",
+		"/home/jl/github/nginx/src/os/win32/ngx_win32_config.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_proxy_module.c",
+		"/home/jl/github/nginx/src/stream/ngx_stream.c",
+		"/home/jl/github/nginx-off/rele/conf/nginx.conf",
+		"/home/jl/github/nginx/rele/conf/nginx.conf.default",
+		"/home/jl/github/nginx/src/http/modules/ngx_http_proxy_module.c",
+		"/home/jl/github/nginx/src/http/ngx_http_upstream.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_upstream_round_robin.c",
+		"/home/jl/github/nginx/rele/logs/error.log",
+		"/home/jl/github/nginx/src/core/ngx_resolver.c",
+		"/home/jl/github/nginx/src/event/ngx_event_connect.c",
+		"/home/jl/github/nginx/rele/logs/access.log",
+		"/home/jl/github/nginx/src/event/ngx_event_connect.h",
+		"/home/jl/github/nginx-lemuria-stream-module/ngx_lemuria_stream_module.c",
+		"/home/jl/github/nginx/src/stream/ngx_stream_upstream_round_robin.h",
+		"/home/jl/github/nginx/src/stream/ngx_stream_upstream_hash_module.c",
+		"/home/jl/github/lua-nginx-module/config",
+		"/home/jl/github/lua-resty-mysql/lib/resty/mysql.lua",
+		"/home/jl/github/mysql-async-example/README.md",
+		"/home/jl/github/nginx/src/stream/ngx_stream_limit_conn_module.c",
+		"/home/jl/github/nginx/conf/nginx.conf",
+		"/home/jl/github/nginx/nginx.conf",
+		"/home/jl/github/nginx_module_samples/nginx_http_fun_module_1/ngx_http_fun_module.c",
+		"/home/jl/github/nginx/src/stream/ngx_stream_geo_module.c",
+		"/home/jl/github/nginx-lemuria-stream-module/config",
+		"/home/jl/github/nginx_module_samples/nginx_http_fun_module_1/config",
+		"/home/jl/my/Lemuria/serv/S4/Common/link.cpp",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/HttpReqParse.lua",
+		"/home/jl/my/Lemuria/serv/S4/Common/GXContext.cpp",
+		"/home/jl/my/Lemuria/serv/S4/Common/GXContext.h",
+		"/home/jl/my/Lemuria/serv/S4/router/Makefile",
+		"/home/jl/my/Lemuria/serv/S4/Common/link.h",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/LemuriaParse.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/LuaInterface.h",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/OnHttpReq.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/LuaInterface.cpp",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/box1.lua",
+		"/home/jl/my/Lemuria/serv/S4/Common/GXCfunction.h",
+		"/home/jl/my/Lemuria/serv/S4/Common/GXCfunction.cpp",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/predefine/1init_ffi.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/cfunction.cpp",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/OnGXMessage.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/main.cpp",
+		"/usr/local/nginx/conf/nginx.conf",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/mod/luastate.lua",
+		"/home/jl/my/Lemuria/serv/S4/gate/message_dispatch.cpp",
+		"/home/jl/my/Lemuria/serv/S4/Common/packet_header.h",
+		"/home/jl/my/Lemuria/serv/S4/Common/hiredis/async.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/hiredis/hiredis.c",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/redis_dispatch.lua",
+		"/home/jl/my/Lemuria/serv/S4/Common/pbc/pbc-lua.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/ae/ae.h",
+		"/home/jl/my/Lemuria/serv/S4/Common/ae/ae.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/hiredis/net.h",
+		"/home/jl/my/Lemuria/serv/S4/Common/hiredis/net.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/hiredis/hiredis.h",
+		"/home/jl/my/Lemuria/serv/S4/Common/ae/ae_epoll.c",
+		"/home/jl/github/luasys/src/event/epoll.h",
+		"/home/jl/github/luasys/src/sock/sys_sock.c",
+		"/home/jl/github/luasys/src/luasys.h",
+		"/home/jl/github/luasys/src/event/epoll.c",
+		"/home/jl/github/luasys/src/event/evq.h",
+		"/home/jl/github/luasys/README",
+		"/home/jl/github/luasys/test/event/test_evq.lua",
+		"/home/jl/github/luasys/test/event/bench.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/mod/luajit_h.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/predefine/config.lua",
+		"/home/jl/github/nginx/objs/nginx.conf",
+		"/home/jl/github/server-configs-nginx/nginx.conf",
+		"/home/jl/github/server-configs-nginx/sites-available/example.com",
+		"/home/jl/github/server-configs-nginx/sites-available/README.md",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/predefine/gx_lua.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/mod/protobuf.lua",
+		"/home/jl/github/pbc/src/proto.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/pbc/proto.c",
+		"/home/jl/github/pbc/binding/lua/protobuf.lua",
+		"/home/jl/github/pbc/binding/lua/testparser.lua",
+		"/home/jl/github/pbc/binding/lua/parser.lua",
+		"/home/jl/github/lua-protobuf/pb.h",
+		"/home/jl/github/lua-protobuf/pb.c",
+		"/home/jl/github/lua-protobuf/test/test_protobuf.lua",
+		"/home/jl/github/lua-protobuf/deprecated/pb.lua",
+		"/home/jl/github/lua-protobuf/protoc-gen-lua",
+		"/home/jl/github/lua-protobuf/test/test.lua",
+		"/home/jl/github/lua-protobuf/test/test_codec.c",
+		"/home/jl/github/pbc/src/proto.h",
+		"/home/jl/github/pbc/binding/lua/Makefile",
+		"/home/jl/github/pbc/binding/lua/README.md",
+		"/home/jl/github/pbc/README.md",
+		"/home/jl/github/pbc/src/varint.c",
+		"/home/jl/github/pbc/Makefile",
+		"/home/jl/my/Lemuria/serv/S4/Common/picohttpparser/test.c",
+		"/home/jl/my/Lemuria/serv/S4/Common/picohttpparser/picohttpparser.h",
+		"/home/jl/my/Lemuria/serv/S4/router/message_dispatch.cpp",
+		"/home/jl/my/Lemuria/serv/S4/router/cfunction.h",
+		"/home/jl/github/picohttpparser/test.c",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/GameServer.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/RouteTable.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/Modules$Core/System/StoreManager.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/_Cache/Gamer/GamerCache.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/Modules$Core/Gamer/GamerManager.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/_Cache/Gamer/GamerFactory.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/Modules$Core/Gamer/CoreManager.cs",
+		"/home/jl/my/hgrc_server/Patrix_Lib/ZinEngine.Framework.Server/Modules/Server/Components/ServerTask.cs",
+		"/home/jl/my/hgrc_server/Patrix_Lib/ZinEngine.Framework.Server/Modules/Task/TaskHelper.cs",
+		"/home/jl/my/hgrc_server/Destiny_Server/trunk/Destiny.Server/Program.cs",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/boxraid.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/box/ma.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/init.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/predefine/redis_common.lua",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/zero/OnFrame.lua",
+		"/home/jl/my/Lemuria/serv/S4/Common/types.h",
+		"/home/jl/my/Lemuria/serv/S4/router/lua/predefine/init.lua"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/jl/github/nginx/src/stream",
+			"/home/jl/github/nginx/src",
+			"/home/jl/github/nginx/src/stream",
+			"/home/jl/github/nginx/src",
+			"/home/jl/github/nginx/src/stream",
+			"/home/jl/my/Lemuria/serv/S4/Common",
+			"/home/jl/my/Lemuria/serv/S4/Common/hiredis",
+			"",
+			"/home/jl/github/pbc/src",
+			"/home/jl/my/Lemuria/serv/S4/router",
+			"/home/jl/my/Lemuria/serv/S4/router/lua",
+			"/home/jl/my/Lemuria/serv/S4/Common",
+			"/home/jl/zzz2/LogAnalysis/Src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"proxy_upload_rate",
+			"ngx_pnalloc",
+			"lemuria",
+			"proxy_protocol",
+			"n = src->recv(src, b->last, size);",
+			"upstream_out",
+			"lemuria",
+			"upstream_out",
+			"proxy_protocol",
+			"ngx_stream_proxy_protocol_handler",
+			"proxy_protocol",
+			"keepalive",
+			"ngx_stream_proxy_send_proxy_protocol",
+			"proxy_protocol",
+			"ngx_event_connect_peer",
+			"connect to %",
+			"lemuria",
+			"get rr peer, try:",
+			"lemuria",
+			"ngx_stream_upstream_init_round_robin",
+			"proxy_pass",
+			"Searching",
+			"NGX_STREAM_MAIN_CONF",
+			"ngx_stream_upstream_least_conn",
+			"lua_pop",
+			"link_stat_",
+			"redisConnectNonBlock",
+			"redisContextConnectTcp",
+			"timeout",
+			"redisContextConnectTcp",
+			"connect",
+			"input_context_",
+			"input_context",
+			"app_context",
+			"input_context",
+			"optype",
+			"_env_enum_id",
+			"pbc_type",
+			"loadproto",
+			"luaopen_pb",
+			"PB_BUFFER",
+			"PB_SLICE",
+			"_pbcM_sp_query",
+			"pbc_enum_id",
+			"push_bin",
+			");\n",
+			"ffi.string",
+			"ffi.cast",
+			"buflen",
+			"try_deal_one_http",
+			"c_lua_new_vm",
+			"cur_game_time",
+			"cur_stream_get_bin",
+			"c_luaopen_bson",
+			"get_box_num",
+			"lua_vm_",
+			"lua_vm2_",
+			"cur_game_time",
+			"GXContextMessageDispatch2",
+			"_is_http_header",
+			"CLIENT_HEADER_LEN",
+			"bufio",
+			"F_liucun",
+			"last_10_op",
+			"_parse_a_line",
+			"|1|",
+			"calcRetainData",
+			"LogData",
+			"11711444"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "rele/conf/nginx.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1154,
+								1154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/stream/ngx_stream_proxy_module.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64201,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										45520,
+										45520
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								45520,
+								45520
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 23992.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/stream/ngx_stream.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								536,
+								536
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 97.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/core/ngx_proxy_protocol.c",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3352,
+								3352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///home/jl/golang/src/zu1go":
+	{
+		"height": 100.0
+	},
+	"output.9o:///home/jl/zzz1":
+	{
+		"height": 70.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 128.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "nginx.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
