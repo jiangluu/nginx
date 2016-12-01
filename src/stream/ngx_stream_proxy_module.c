@@ -1650,7 +1650,11 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
                         return;
                     }
                     u_char *cur = ngx_cpymem(le_buf, le_b->last, after_bodylen-le_b->last);
+                    *cur++ = ' ';
                     cur += ngx_sock_ntop(src->sockaddr, src->socklen, cur, 60, 0);
+                    *cur++ = ':';
+                    ngx_uint_t port = ngx_inet_get_port(c->sockaddr);
+                    cur = ngx_slprintf(cur, cur+8, "%ui", port);
 
 
                     *ll = cl2;
@@ -1685,6 +1689,7 @@ ngx_stream_proxy_process(ngx_stream_session_t *s, ngx_uint_t from_upstream,
                 }
 
                 // END
+
                 cl->buf->pos = b->last;
                 cl->buf->last = b->last + n;
                 cl->buf->tag = (ngx_buf_tag_t) &ngx_stream_proxy_module;
